@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TITAN FORGE | Unleash Your Greatness</title>
-  <!-- Cyberpunk / Sporty fonts: Orbitron for titles, Rajdhani for bold cyber/athletic headings, Exo 2 for body -->
+  <!-- Sporty Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;0,900;1,700&family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
@@ -12,6 +12,37 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <i class="fas fa-dumbbell logo-icon"></i>
+        <span>TITAN<span class="highlight">FORGE</span></span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#exercises" class="nav-link">Exercise Vault</a></li>
+        <li><a href="#routines" class="nav-link">Routines</a></li>
+        <li><a href="#schedule" class="nav-link">Weekly Split</a></li>
+        <li><a href="#motivation" class="nav-link">Philosophy</a></li>
+        <li><a href="#join" class="nav-link btn-nav">Join Now</a></li>
+      </ul>
+
+      <!-- Theme Switcher & Mobile Menu Toggle -->
+      <div class="nav-controls">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <header class="hero">
@@ -28,8 +59,8 @@
       <p class="hero-subtext">No shortcuts. No excuses. Join thousands of relentless warriors breaking plateaus, building real muscle, and conquering their true potential.</p>
       
       <div class="hero-actions">
-        <a href="#routines" class="btn btn-neon btn-pulse">Start Training Today</a>
-        <a href="#motivation" class="btn btn-cyber">Explore Philosophy</a>
+        <a href="#exercises" class="btn btn-neon btn-pulse">Explore Exercises</a>
+        <a href="#routines" class="btn btn-cyber">View Training Splits</a>
       </div>
 
       <div class="stats-bar">
@@ -49,13 +80,46 @@
     </div>
   </header>
 
-  <!-- Motivational Callout -->
-  <section class="quote-section" id="motivation">
+  <!-- EXERCISES VAULT & LIVE SEARCH BAR SECTION -->
+  <section class="exercises-section" id="exercises">
     <div class="container">
-      <div class="quote-card glow-card">
-        <i class="fas fa-quote-left quote-icon neon-glow"></i>
-        <blockquote>"The pain you feel today will be the strength you feel tomorrow. Every single rep counts towards the version of you that refuses to quit."</blockquote>
-        <p class="author">— Coach Alex Vance, Master S&C Specialist</p>
+      <div class="section-header">
+        <span class="sub-heading">ANATOMY OF POWER</span>
+        <h2 class="section-title glitch-sub" data-text="EXERCISE DIRECTORY">EXERCISE DIRECTORY</h2>
+        <p>Master the fundamental movements with proper biomechanics and targeted activation.</p>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="search-filter-wrapper">
+        <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="exerciseSearch" placeholder="Search exercises by name, muscle, or equipment...">
+          <button id="clearSearch" class="clear-btn" aria-label="Clear search" style="display: none;">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="filter-pills" id="filterPills">
+          <button class="filter-pill active" data-filter="all">All Targets</button>
+          <button class="filter-pill" data-filter="chest">Chest</button>
+          <button class="filter-pill" data-filter="back">Back</button>
+          <button class="filter-pill" data-filter="legs">Legs</button>
+          <button class="filter-pill" data-filter="shoulders">Shoulders</button>
+          <button class="filter-pill" data-filter="arms">Arms</button>
+          <button class="filter-pill" data-filter="core">Core & Cardio</button>
+        </div>
+      </div>
+
+      <!-- Live Exercise Grid -->
+      <div class="exercise-grid" id="exerciseGrid">
+        <!-- Rendered by JavaScript dynamically -->
+      </div>
+      
+      <!-- No Results Message -->
+      <div id="noResults" class="no-results" style="display: none;">
+        <i class="fas fa-dumbbell fa-3x"></i>
+        <h3>No matching exercises found</h3>
+        <p>Try searching with another keyword or resetting the category filter.</p>
       </div>
     </div>
   </section>
@@ -137,7 +201,7 @@
   </section>
 
   <!-- Interactive Daily Routine Timeline -->
-  <section class="daily-split">
+  <section class="daily-split" id="schedule">
     <div class="container">
       <div class="section-header">
         <span class="sub-heading">THE BLUEPRINT</span>
@@ -175,6 +239,17 @@
     </div>
   </section>
 
+  <!-- Motivational Callout -->
+  <section class="quote-section" id="motivation">
+    <div class="container">
+      <div class="quote-card glow-card">
+        <i class="fas fa-quote-left quote-icon neon-glow"></i>
+        <blockquote>"The pain you feel today will be the strength you feel tomorrow. Every single rep counts towards the version of you that refuses to quit."</blockquote>
+        <p class="author">— Coach Alex Vance, Master S&C Specialist</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Call to Action Banner -->
   <section class="cta-banner" id="join">
     <div class="container">
@@ -197,7 +272,9 @@
         <p>Forging iron mindsets and unstoppable bodies since 2018.</p>
       </div>
       <div class="footer-links">
+        <a href="#exercises">Exercises</a>
         <a href="#routines">Routines</a>
+        <a href="#schedule">Schedule</a>
         <a href="#motivation">Philosophy</a>
         <a href="#join">Membership</a>
       </div>
@@ -207,6 +284,7 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
 
