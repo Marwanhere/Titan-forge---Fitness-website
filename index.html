@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TITAN FORGE | Unleash Your Greatness</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Cyberpunk / Sporty fonts: Orbitron for titles, Rajdhani for bold cyber/athletic headings, Exo 2 for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;0,900;1,700&family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,25 +16,33 @@
   <!-- Hero Section -->
   <header class="hero">
     <div class="overlay"></div>
+    <div class="cyber-grid"></div>
     <div class="hero-content">
-      <span class="badge">🔥 ELEVATE YOUR STANDARD</span>
-      <h1>TRANSFORM YOUR BODY.<br>COMMAND YOUR LIFE.</h1>
-      <p>No shortcuts. No excuses. Join thousands of relentless warriors breaking plateaus, building real muscle, and conquering their true potential.</p>
+      <span class="badge pulse-border">⚡ ELEVATE YOUR STANDARD</span>
+      
+      <!-- Glitch effect text heading -->
+      <h1 class="glitch-text" data-text="TRANSFORM YOUR BODY. COMMAND YOUR LIFE.">
+        TRANSFORM YOUR BODY.<br>COMMAND YOUR LIFE.
+      </h1>
+
+      <p class="hero-subtext">No shortcuts. No excuses. Join thousands of relentless warriors breaking plateaus, building real muscle, and conquering their true potential.</p>
+      
       <div class="hero-actions">
-        <a href="#routines" class="btn btn-primary">Start Training Today</a>
-        <a href="#motivation" class="btn btn-secondary">Explore Philosophy</a>
+        <a href="#routines" class="btn btn-neon btn-pulse">Start Training Today</a>
+        <a href="#motivation" class="btn btn-cyber">Explore Philosophy</a>
       </div>
+
       <div class="stats-bar">
-        <div class="stat-item">
-          <h3>25K+</h3>
+        <div class="stat-item pulse-stat">
+          <h3 class="neon-number">25K+</h3>
           <p>Active Athletes</p>
         </div>
-        <div class="stat-item">
-          <h3>98%</h3>
+        <div class="stat-item pulse-stat">
+          <h3 class="neon-number">98%</h3>
           <p>Goal Completion</p>
         </div>
-        <div class="stat-item">
-          <h3>150+</h3>
+        <div class="stat-item pulse-stat">
+          <h3 class="neon-number">150+</h3>
           <p>Custom Workouts</p>
         </div>
       </div>
@@ -41,8 +52,8 @@
   <!-- Motivational Callout -->
   <section class="quote-section" id="motivation">
     <div class="container">
-      <div class="quote-card">
-        <i class="fas fa-quote-left quote-icon"></i>
+      <div class="quote-card glow-card">
+        <i class="fas fa-quote-left quote-icon neon-glow"></i>
         <blockquote>"The pain you feel today will be the strength you feel tomorrow. Every single rep counts towards the version of you that refuses to quit."</blockquote>
         <p class="author">— Coach Alex Vance, Master S&C Specialist</p>
       </div>
@@ -54,70 +65,70 @@
     <div class="container">
       <div class="section-header">
         <span class="sub-heading">PROVEN ARCHITECTURE</span>
-        <h2>CHOOSE YOUR DISCIPLINE</h2>
+        <h2 class="section-title glitch-sub" data-text="CHOOSE YOUR DISCIPLINE">CHOOSE YOUR DISCIPLINE</h2>
         <p>Curated weekly splits engineered to maximize hypertrophy, athletic power, and stamina.</p>
       </div>
 
       <div class="cards-grid">
         <!-- Card 1 -->
-        <div class="routine-card">
+        <div class="routine-card pulse-card">
           <div class="card-image-wrap">
             <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=700&q=80" alt="Hypertrophy Building">
-            <span class="card-tag">Hypertrophy</span>
+            <span class="card-tag tag-cyan">Hypertrophy</span>
           </div>
           <div class="card-content">
             <h3>Iron Forge Split (PPL)</h3>
             <p>Push, Pull, Legs protocol engineered for maximum mass acquisition and balanced aesthetic balance.</p>
             <ul class="routine-features">
-              <li><i class="fas fa-check"></i> 6 Days per week / 60 Mins</li>
-              <li><i class="fas fa-check"></i> Heavy compounds + isolations</li>
-              <li><i class="fas fa-check"></i> Progressive overload focus</li>
+              <li><i class="fas fa-bolt neon-icon"></i> 6 Days per week / 60 Mins</li>
+              <li><i class="fas fa-bolt neon-icon"></i> Heavy compounds + isolations</li>
+              <li><i class="fas fa-bolt neon-icon"></i> Progressive overload focus</li>
             </ul>
             <div class="card-footer">
               <span class="level">Intermediate</span>
-              <a href="#join" class="card-link">View Split &rarr;</a>
+              <a href="#join" class="card-link btn-pulse-text">View Split &rarr;</a>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="routine-card highlight-card">
+        <!-- Card 2 (Popular highlighted) -->
+        <div class="routine-card pulse-card highlight-card">
           <div class="card-image-wrap">
             <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=80" alt="Strength & Conditioning">
-            <span class="card-tag popular">Most Popular</span>
+            <span class="card-tag tag-neon-lime">Most Popular</span>
           </div>
           <div class="card-content">
             <h3>Spartan Athletic Power</h3>
             <p>Blends barbell strength cycles with explosive functional conditioning, agility, and mobility.</p>
             <ul class="routine-features">
-              <li><i class="fas fa-check"></i> 4 Days per week / 50 Mins</li>
-              <li><i class="fas fa-check"></i> High metabolic output</li>
-              <li><i class="fas fa-check"></i> Plyometrics & kettlebell flow</li>
+              <li><i class="fas fa-bolt neon-icon"></i> 4 Days per week / 50 Mins</li>
+              <li><i class="fas fa-bolt neon-icon"></i> High metabolic output</li>
+              <li><i class="fas fa-bolt neon-icon"></i> Plyometrics & kettlebell flow</li>
             </ul>
             <div class="card-footer">
               <span class="level">All Levels</span>
-              <a href="#join" class="card-link">View Split &rarr;</a>
+              <a href="#join" class="card-link btn-pulse-text">View Split &rarr;</a>
             </div>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="routine-card">
+        <div class="routine-card pulse-card">
           <div class="card-image-wrap">
             <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=700&q=80" alt="HIIT Shred">
-            <span class="card-tag">Fat Shred</span>
+            <span class="card-tag tag-magenta">Fat Shred</span>
           </div>
           <div class="card-content">
             <h3>Viper Velocity Burn</h3>
             <p>High-octane interval protocols engineered to melt fat while retaining dense lean muscle tissue.</p>
             <ul class="routine-features">
-              <li><i class="fas fa-check"></i> 5 Days per week / 40 Mins</li>
-              <li><i class="fas fa-check"></i> Calisthenics + HIIT intervals</li>
-              <li><i class="fas fa-check"></i> Maximum calorie expenditure</li>
+              <li><i class="fas fa-bolt neon-icon"></i> 5 Days per week / 40 Mins</li>
+              <li><i class="fas fa-bolt neon-icon"></i> Calisthenics + HIIT intervals</li>
+              <li><i class="fas fa-bolt neon-icon"></i> Maximum calorie expenditure</li>
             </ul>
             <div class="card-footer">
               <span class="level">Advanced</span>
-              <a href="#join" class="card-link">View Split &rarr;</a>
+              <a href="#join" class="card-link btn-pulse-text">View Split &rarr;</a>
             </div>
           </div>
         </div>
@@ -130,32 +141,32 @@
     <div class="container">
       <div class="section-header">
         <span class="sub-heading">THE BLUEPRINT</span>
-        <h2>WEEKLY BATTLE SCHEDULE</h2>
+        <h2 class="section-title">WEEKLY BATTLE SCHEDULE</h2>
         <p>A peek inside our flagship 5-day structured training cycle.</p>
       </div>
 
       <div class="timeline-grid">
-        <div class="timeline-day">
+        <div class="timeline-day pulse-card">
           <div class="day-badge">MON</div>
           <h4>Chest & Triceps</h4>
           <p>Flat Bench Press, Incline Dumbbell Flyes, Cable Pushdowns.</p>
         </div>
-        <div class="timeline-day">
+        <div class="timeline-day pulse-card">
           <div class="day-badge">TUE</div>
           <h4>Back & Biceps</h4>
           <p>Barbell Deadlifts, Weighted Pull-Ups, Barbell Hammer Curls.</p>
         </div>
-        <div class="timeline-day">
+        <div class="timeline-day pulse-card">
           <div class="day-badge">WED</div>
           <h4>Active Recovery</h4>
           <p>Zone 2 Cardio, Deep Hip & Shoulder Mobility, Core Pillars.</p>
         </div>
-        <div class="timeline-day">
+        <div class="timeline-day pulse-card">
           <div class="day-badge">THU</div>
           <h4>Shoulders & Abs</h4>
           <p>Overhead Military Press, Lateral Raises, Hanging Leg Raises.</p>
         </div>
-        <div class="timeline-day">
+        <div class="timeline-day pulse-card">
           <div class="day-badge">FRI</div>
           <h4>Quads, Hamstrings & Calves</h4>
           <p>Barbell Back Squats, Romanian Deadlifts, Bulgarian Split Squats.</p>
@@ -167,12 +178,12 @@
   <!-- Call to Action Banner -->
   <section class="cta-banner" id="join">
     <div class="container">
-      <div class="cta-box">
-        <h2>READY TO STOP DREAMING AND START GRINDING?</h2>
+      <div class="cta-box glow-card">
+        <h2 class="glitch-text" data-text="STOP DREAMING. START GRINDING.">STOP DREAMING. START GRINDING.</h2>
         <p>Take the pledge today. Your first training assessment and free 7-day gym access pass are waiting.</p>
         <form class="cta-form" onsubmit="event.preventDefault(); alert('Welcome to the brotherhood! Your pass has been issued.');">
           <input type="email" placeholder="Enter your email address" required>
-          <button type="submit" class="btn btn-primary">Claim Free Pass</button>
+          <button type="submit" class="btn btn-neon btn-pulse">Claim Free Pass</button>
         </form>
       </div>
     </div>
@@ -182,7 +193,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <h3>TITAN FORGE</h3>
+        <h3 class="neon-brand">TITAN FORGE</h3>
         <p>Forging iron mindsets and unstoppable bodies since 2018.</p>
       </div>
       <div class="footer-links">
